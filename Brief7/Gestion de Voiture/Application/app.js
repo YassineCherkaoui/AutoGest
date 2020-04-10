@@ -46,9 +46,6 @@ app.get('/intervention', function(req, res){
 app.get('/client', (req, res) => {
 	res.render('client', { data });
 });
-app.get('/Search', function (req, res) {
-    res.sendFile(__dirname + "/Search.html");
-});
 
 
 
@@ -457,18 +454,6 @@ app.get('/contactdata',function(req, res){
     });
 })
 //search===============================================================
-app.get('/all data',function(req, res){
-
-    fs.readFile('./public/data/contact.json,', 'utf-8', function(err, data) {
-        if (err) throw err;
-    
-        var arrayOfObjects = JSON.parse(data);
-      
-        res.send(arrayOfObjects);
-        console.log(arrayOfObjects);
-        
-    });
-})
 
 
 
